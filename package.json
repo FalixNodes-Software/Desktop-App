@@ -9,7 +9,7 @@
   "author": "KorbsStudio",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^9.0.5",
+    "electron": "^9.3.0",
     "lodash": "4.17.19"
   }
 }
