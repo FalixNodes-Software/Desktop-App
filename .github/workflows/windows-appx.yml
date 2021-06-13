@@ -1,0 +1,29 @@
+name: Create AppX
+
+on:
+  workflow_dispatch:
+    
+jobs:
+  build-appx:
+
+    runs-on: self-hosted
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+    
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm run rebuild
+    - run: npm run build
+    - run: electron-windows-store --input-directory C:\actions-runner\_work\Desktop-App\dist\win-unpacked  --output-directory C:\actions-runner\_work\Desktop-App\dist\ --package-version 2.4.3.0 --package-name falixnodes --publisher-display-name "Korbs Studio" --identity-name "32203KorbsStudio.FalixNodesSoftware" --package-display-name "FalixNodes Software" --assets C:\Users\Korbs\Documents\assets
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.3
+      with:
+        name: Distribution
+        path: dist/
