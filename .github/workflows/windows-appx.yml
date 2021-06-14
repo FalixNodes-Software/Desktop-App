@@ -9,5 +9,5 @@ jobs:
     runs-on: self-hosted
     
     steps:
-    - run: electron-windows-store --input-directory C:\Users\Korbs\Documents\GitHub-Actions\actions-runner-falix\_work\Desktop-App\Desktop-App\dist\win-ai32-unpacked  --output-directory C:\Users\Korbs\Documents\GitHub-Actions\actions-runner-falix\_work\Desktop-App\Desktop-App\dist\ --package-version 2.4.3.0 --package-name falixnodes --publisher-display-name "Korbs Studio" --identity-name "32203KorbsStudio.FalixNodesSoftware" --package-display-name "FalixNodes Software" --assets C:\Users\Korbs\Documents\assets
+    - run: electron-windows-store --input-directory C:\Users\Korbs\Documents\GitHub-Actions\actions-runner-falix\_work\Desktop-App\Desktop-App\dist\win-ia32-unpacked  --output-directory C:\Users\Korbs\Documents\GitHub-Actions\actions-runner-falix\_work\Desktop-App\Desktop-App\dist\ --package-version 2.4.3.0 --package-name falixnodes --publisher-display-name "Korbs Studio" --identity-name "32203KorbsStudio.FalixNodesSoftware" --package-display-name "FalixNodes Software" --assets C:\Users\Korbs\Documents\assets
 
